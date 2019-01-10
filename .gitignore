@@ -7,3 +7,5 @@ build/phpdox
 build/testdox
 cache.properties
 .idea
+/vendor
+.DS_Store
