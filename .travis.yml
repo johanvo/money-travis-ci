@@ -6,3 +6,5 @@ php:
 install:
   - composer update
 
+script:
+  - vendor/bin/phpcs src/**
