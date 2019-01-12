@@ -7,4 +7,4 @@ install:
   - composer update
 
 script:
-  - vendor/bin/phpcs src/**
+  - vendor/bin/phpcs --standard=PSR2 src/**
