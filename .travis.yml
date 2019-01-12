@@ -6,7 +6,11 @@ php:
 install:
   - composer update
 
-script:
-  - vendor/bin/phpcs --standard=PSR2 src/**
-  - vendor/bin/phpunit
-  - php -f coverage-checker.php logs/clover.xml 100
+jobs:
+  include:
+    - stage: cs and test
+      script:
+      - vendor/bin/phpcs --standard=PSR2 src/**
+    - stage: cs and test
+      - vendor/bin/phpunit
+      - php -f coverage-checker.php logs/clover.xml 100
