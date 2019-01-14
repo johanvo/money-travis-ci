@@ -9,10 +9,10 @@ if (!file_exists($inputFile)) {
 $xml = new SimpleXMLElement(file_get_contents($inputFile));
 $errors = $xml->xpath("//error[@severity='error']");
 
-if ( count($errors) ) {
-	echo 'PSR2 style ORDERS MUST BE OBAYED AT ALL TIMES';
+if (count($errors)) {
+	echo 'PSR2 style ORDERS MUST BE OBAYED AT ALL TIMES' . PHP_EOL;
 	exit(1);
 
 } else {
-	echo 'Well done citizin';
+	echo 'Well done citizin' . PHP_EOL;
 }
