@@ -9,5 +9,5 @@ install:
 script:
   - vendor/bin/phpunit
   - php -f coverage-checker.php logs/clover.xml 100
-  - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/**
+  - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/** || exit 0;
   - php -f snifreport-checker.php checkstyle.xml
