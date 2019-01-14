@@ -10,7 +10,7 @@ $xml = new SimpleXMLElement(file_get_contents($inputFile));
 $filesWithError = $xml->xpath("//error[@severity='error']/parent::file");
 
 if (count($filesWithError) > 0) {
-	echo PHP_EOL . 'FAILURE: ' . PHP_EOL;
+	echo PHP_EOL . 'STYLE FAILURE: ' . PHP_EOL;
 
 	foreach ($filesWithError as $fileWithError) {
 		$filename = $fileWithError['name'];
@@ -19,15 +19,15 @@ if (count($filesWithError) > 0) {
 
 		foreach ($errors as $error) {
 			$error = (array)$error;
-			$message = "{$filename}:{$error['@attributes']['line']}:{$error['@attributes']['column']} "
+			$message = "\t{$filename}:{$error['@attributes']['line']}:{$error['@attributes']['column']} "
 				. $error['@attributes']['message'] . PHP_EOL;
 			echo $message;
 		}
 	}
-	echo PHP_EOL . 'PSR2 style ORDERS MUST BE OBAYED AT ALL TIMES' . PHP_EOL;
+	echo PHP_EOL . 'PSR2 style ORDERS MUST BE OBEYED AT ALL TIMES!!!' . PHP_EOL;
 
 	exit(1);
 
 }
 
-echo 'Well done citizin' . PHP_EOL;
+echo 'Well done citizen!' . PHP_EOL;
