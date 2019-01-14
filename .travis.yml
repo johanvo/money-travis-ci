@@ -6,12 +6,8 @@ php:
 install:
   - composer update
 
-jobs:
-  include:
-    - stage: cs and test
-      script:
-      - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/**
-      - php -f snifreport-checker.php checkstyle.xml
-    - stage: cs and test
-      - vendor/bin/phpunit
-      - php -f coverage-checker.php logs/clover.xml 100
+script:
+  - vendor/bin/phpunit
+  - php -f coverage-checker.php logs/clover.xml 100
+  - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/**
+  - php -f snifreport-checker.php checkstyle.xml
