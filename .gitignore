@@ -9,3 +9,7 @@ cache.properties
 .idea
 /vendor
 .DS_Store
+/checkstyle.xml
+/coverage
+/logs
+/testdox
