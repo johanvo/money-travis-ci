@@ -51,7 +51,7 @@ class Money implements \JsonSerializable
      */
     public function __construct($amount, $currency)
     {
-        if (!is_int($amount)) {
+		if (!is_int($amount)) {
             throw new InvalidArgumentException('$amount must be an integer');
         }
 
