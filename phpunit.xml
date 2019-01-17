@@ -15,12 +15,12 @@
     </testsuite>
 
     <logging>
-        <log type="coverage-html" target="coverage"/>
+        <log type="coverage-html" target="logs/coverage-html"/>
         <log type="coverage-clover" target="logs/clover.xml"/>
         <log type="coverage-crap4j" target="logs/crap4j.xml"/>
-        <log type="coverage-xml" target="logs/coverage"/>
+        <log type="coverage-xml" target="logs/coverage-xml"/>
         <log type="junit" target="logs/junit.xml"/>
-        <log type="testdox-html" target="testdox/index.html"/>
+        <log type="testdox-html" target="logs/testdox/index.html"/>
     </logging>
 
     <filter>
