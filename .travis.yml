@@ -20,4 +20,4 @@ deploy:
   file: logs/*
   file_glob: true
   on:
-    branch: master
+    tags: true
