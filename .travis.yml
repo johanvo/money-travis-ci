@@ -11,3 +11,5 @@ script:
   - php -f coverage-checker.php logs/clover.xml 100
   - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=logs/checkstyle.xml src/** || true;
   - php -f snifreport-checker.php logs/checkstyle.xml
+  - vendor/bin/phpcb --source=src --log=logs --output=logs/code_browser
+
