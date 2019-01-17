@@ -13,3 +13,11 @@ script:
   - php -f snifreport-checker.php logs/checkstyle.xml
   - vendor/bin/phpcb --source=src --log=logs --output=logs/code_browser
 
+deploy:
+  provider: releases
+  api_key:
+    secure: Xr+ECaOIexjNNqjktYvORRZJg5RfolcOX46WgqipTg65QLsMRMPSFruP4Qez4mwXlkdiCSu9C0y2+b1LYM+R2MK5oe+1XMCwfnMILts14yIof3ukMzB0zuRNCttbvH/+XbAXVMHdM4EJid6nhb1kZvGmfbtTlXes+vCkMQ1XHwIXoKPynLz4/MQ2zmUuE+Ml0GaYCFFPWTxN/R6esZ3Fq2pU/bdM40o4vlWNzhOBoHDNYPsH3ARAT8oKvIsWZGT8jftHBygYUzGQIBmnW7WUageVml08z2UO91aktGaOcY7an7WeZyoCsL7IwLhVizEsQvi1jWE1sZ9O2ZfNQZg8VhMXEYyH6EVohmw20swBdCNx1gyKhL8XUot4GFeLPQHyjabSAib/i/xrUTI1ZFMVPAdshergFHcD/+8D2V87ophGwU6QrPaxQA79+DkNgoYcaK0l7tXjrUsGW4VsBCD6Ibd8KhiVUut3YsiAhYE/Zqn117GdSF5OFMIV7y09nPIHjY3LnczYyNuHgP31mVVxKYzBzXXiz532t0GMVLnwupbeyDWcMULrAbFuUP4IvwQDdWtzV+XgvjN5d/eRNs8yNWmZtse1Cc9FMebLFw2V2VTlPJJ1wlDH79LDZkUQv1d1FafPMO+3UDVjz+POW887X2wxO3NKvqeiAoUwvf20D6Q=
+  file: logs/*
+  file_glob: true
+  on:
+    repo: johanvo/money-travis-ci
