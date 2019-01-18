@@ -17,7 +17,7 @@ deploy:
   provider: releases
   api_key:
     secure: mch44gfj6jeoDX/iaqXRLX4olaJwvvbRS2zFFRy/NLfoK2sPif8Jp0lz/C32/AnDhQ3YXJzyy/3ka9Oa6VlUg+qBfOOEZjtaDsyPKd2ieg+mLP2kj46quQjJjF/jAehvvGdYKBqNOwsFfo84qiqDZsk/r+IXF9VLRiZVehzeDum0TMrgREXYdU0cln6wKSWv7KLyEpykebGtb0fKgfu2o5nfJrOWIGA3stiIbS4+xPHgnQCNspz1ZKjOEhiKuRzv5c5GWV0qIurQy918XF1xoCPMdj+CVjrFItjdbDx4T3FzfR4/FmeleWm6a9XVL2UnObe1fDmPq5YnFxTTn2jGTHLEOu1kBRSLFm/e9YqhGJ5tE7jlZdf4BW6AlAMfgZ4ePFD9dVQmcHRtiYEAfIATCo7eycmqMrZWXXzHJ9pegjUSEZ3hrw1OuLuGNlNEKKeMmWr/pR9Guur4+E4DoWRAMKj8W10xInbwwU7Kq7oRA0gHRZ3dGs77uXR3ef8efQDKvwtm4Y+rTlxjlCaY7YndjS9SXfcEUlm2j2i1jQ82vz0cFQVgWvfA5ST2izQ6fwKaUPU9FY1BcNpQV58VbKEz/34v8+6MBG2P+Psn7569ehpgFul9AlGnfkH7e/kT20jcDISd2C9MZ5Nnz/6aAuEuvYxWHCz3Utj1mAHUEcnfNEk=
-  file: logs.zip
+  skip_cleanup: true
   file: logs/checkstyle.xml
   on:
     branch: master
