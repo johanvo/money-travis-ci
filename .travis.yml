@@ -14,4 +14,4 @@ install:
 
 script:
   - vendor/bin/phpcs --standard=ruleset.xml --report-checkstyle src/** |
-      reviewdog -f=checkstyle -name="phpcs" -reporter=github-pr-check
+      reviewdog -f=checkstyle -name="codesniffer" -reporter=github-pr-check
