@@ -1148,6 +1148,8 @@ class Currency
     }
 
     /**
+     * this is an example of a style violation that should cause no problems for PR-1 because it is not one of the changes contained in that pull request
+     *
      * @param string $code
      * @param string $displayName
      * @param integer $numericCode
