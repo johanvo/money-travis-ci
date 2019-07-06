@@ -4,7 +4,7 @@ php:
   - '5.6'
 
 env:
-  - REVIEWDOG_VERSION=0.9.5
+  - REVIEWDOG_VERSION=0.9.12
 
 install:
   - composer update
