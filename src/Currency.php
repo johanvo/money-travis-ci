@@ -23,9 +23,9 @@ namespace SebastianBergmann\Money;
  * @see        http://docs.oracle.com/javase/7/docs/api/java/util/Currency.html
  * @SuppressWarnings(PHPMD.ExcessiveClassLength)
  */
-class Currency
-{
+class Currency {
     /**
+     * example that the custom ruleset does not cause failure of phpcs/reviewdog but is actually used and will still result in warnings on Github (because this line is waaaay too long)
      * @var array
      */
     private static $currencies = [

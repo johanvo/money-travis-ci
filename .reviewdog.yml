@@ -1,0 +1,13 @@
+# TODO Onderstaande zou het mogelijk moeten maken om reviewdog lokaal te draaien met iets als:
+# ./bin/reviewdog -diff="git diff master"
+# Probleem is dat hij zonder foutmelding faalt als je een foute waarde in cmd of errorformat zet (ie: dezelfde output
+# die je krijgt als je geen foutmeldingen hebt :-P).
+# Errorformat zou goed moeten zijn, dus ik vermoed dat het commando faalt (misschien omdat het in de verkeerde dir
+# draait?), maar zonder enige output kost het meer tijd dan ik heb om dat te fixen
+
+
+runner:
+  codesniffer:
+    cmd: ./vendor/bin/phpcs --standard=ruleset.xml --report-checkstyle src/** --basepath=.
+    errorformat:
+      - checkstyle
