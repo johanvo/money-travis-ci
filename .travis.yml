@@ -9,7 +9,7 @@ env:
 install:
   - composer update
   - mkdir -p ~/bin/ && export export PATH="~/bin/:$PATH"
-  - curl -fSL https://github.com/haya14busa/reviewdog/releases/download/$REVIEWDOG_VERSION/reviewdog_linux_amd64 -o ~/bin/reviewdog && chmod +x ~/bin/reviewdog
+  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b $(go env GOPATH)/bin $REVIEWDOG_VERSION
 
 script:
   - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/** || true;
