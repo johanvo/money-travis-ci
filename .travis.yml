@@ -13,4 +13,5 @@ install:
 
 script:
   - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/** || true;
+  - cat checkstyle.xml
   - cat checkstyle.xml | reviewdog -f=checkstyle -name="phpcs" -ci="travis" -reporter=github-pr-check
