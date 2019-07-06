@@ -12,5 +12,5 @@ install:
   - curl -fSL https://github.com/haya14busa/reviewdog/releases/download/$REVIEWDOG_VERSION/reviewdog_linux_amd64 -o ~/bin/reviewdog && chmod +x ~/bin/reviewdog
 
 script:
-  - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=logs/checkstyle.xml src/** || true;
-  - cat logs/checkstyle.xml | reviewdog -f=checkstyle -name="phpcs" -ci="travis" -reporter=github-pr-check
+  - vendor/bin/phpcs --standard=PSR2 --report-checkstyle=checkstyle.xml src/** || true;
+  - cat checkstyle.xml | reviewdog -f=checkstyle -name="phpcs" -ci="travis" -reporter=github-pr-check
