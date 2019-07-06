@@ -25,6 +25,7 @@ namespace SebastianBergmann\Money;
  */
 class Currency {
     /**
+     * example that the custom ruleset does not cause failure of phpcs/reviewdog but is actually used and will still result in warnings on Github (because this line is waaaay too long)
      * @var array
      */
     private static $currencies = [
