@@ -9,9 +9,9 @@ env:
 install:
   - composer update
   - mkdir -p ~/bin/ && export export PATH="~/bin/:$PATH"
-  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | \
+  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh |
      sh -s -- -b $(go env GOPATH)/bin $REVIEWDOG_VERSION
 
 script:
-  - vendor/bin/phpcs --standard=ruleset.xml --report-checkstyle src/** | \
+  - vendor/bin/phpcs --standard=ruleset.xml --report-checkstyle src/** |
       reviewdog -f=checkstyle -name="phpcs" -reporter=github-pr-check
